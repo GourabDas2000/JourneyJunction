@@ -5,13 +5,16 @@ import cors from 'cors';
 import appget from './assets/routes/Trial.js';
 const app = express();
 app.use(express.json());
-app.use(cors())
 dotenv.config();
 const MAIN_URL = process.env.MAIN_URL;
 const PORT = process.env.PORT;
 
 
-
+app.use(cors({
+    origin: ["http://localhost:5173/"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    Credential: true
+}));
 app.get('/', (req, res) => {
     res.send('servere is started')
 });

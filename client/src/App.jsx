@@ -4,9 +4,10 @@ import './App.css'
 
 function App() {
   const [text , settext] = useState('')
+  // console.log(process.env.REACT_BASE_URL)
   const handlesubmit = async() => {
      try{
-       const result = await fetch('http://localhost:8000/auth/text', {
+       const result = await fetch('https://journeyjunction-server.vercel.app/auth/text', {
          method: 'PUT',
          body: JSON.stringify({ text }),
          headers: {
