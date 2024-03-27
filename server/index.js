@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 app.use(cors({
     origin: ["http://localhost:5173/"],
     methods: ["POST", "GET", "PUT", "DELETE"],
-    Credential: true
+    credentials: true
 }));
 app.get('/', (req, res) => {
     res.send('This is it')
