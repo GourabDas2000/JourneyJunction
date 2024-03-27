@@ -8,7 +8,7 @@ function App() {
   const handlesubmit = async() => {
      try{
        const result = await fetch('https://journeyjunction-server.vercel.app/auth/text', {
-         method: 'put',
+         method: 'PUT',
          body: JSON.stringify({ text }),
          headers: {
            'Content-Type': 'application/json'
