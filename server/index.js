@@ -8,7 +8,7 @@ app.use(express.json());
 dotenv.config();
 const MAIN_URL = process.env.MAIN_URL;
 const PORT = process.env.PORT;
-
+app.use(cors())
 
 // app.use(cors({
 //     origin: ["http://localhost:5173/"],

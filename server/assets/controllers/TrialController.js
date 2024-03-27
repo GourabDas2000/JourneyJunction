@@ -9,6 +9,6 @@ export const createtext = async(req, res, next) => {
             message: "Text is successfully updated "
         })
     } catch (e) {
-        next(e)
+        console.log(e);
     }
 }
