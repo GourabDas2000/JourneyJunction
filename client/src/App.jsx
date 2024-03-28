@@ -20,7 +20,7 @@ function App() {
     //   console.log(e)
     //  }
     try{
-      const result = await fetch('https://journeyjunction-server.vercel.app/alltext')
+      const result = await fetch('https://journeyjunction-eiw5ibe6u-gourab-das-projects.vercel.app/alltext')
       // const result = await fetch('http://localhost:8000/alltext')
       const res = await result.json()
       console.log(res)
