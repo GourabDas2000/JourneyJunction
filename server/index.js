@@ -12,9 +12,9 @@ const MAIN_URL = process.env.MAIN_URL;
 const PORT = process.env.PORT;
 
 
-// app.use(cors({
-//     origin: "http://localhost:5173/"
-// }));
+app.use(cors({
+    origin: "https://journeyjunction-server.vercel.app"
+}));
 app.get('/', (req, res) => {
     res.send('This is it')
 });
