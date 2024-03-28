@@ -13,7 +13,9 @@ const PORT = process.env.PORT;
 
 
 app.use(cors({
-    origin: "https://journeyjunction-server.vercel.app"
+    origin: "*",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 app.get('/', (req, res) => {
     res.send('This is it')
