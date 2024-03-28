@@ -1,27 +1,12 @@
 import { useState } from 'react'
-
 import './App.css'
 
 function App() {
   const [text , settext] = useState('')
-  // console.log(process.env.REACT_BASE_URL)
+  const BASE_URL = import.meta.env.VITE_REACT_APP_BASE_URL
   const handlesubmit = async() => {
-    //  try{
-    //    const result = await fetch('https://journeyjunction-server.vercel.app/auth/text', {
-    //      method: 'PUT',
-    //      body: JSON.stringify({ text }),
-    //      headers: {
-    //        'Content-Type': 'application/json'
-    //      }
-    //    })
-    //    const final = await result.json();
-    //    console.log(final);
-    //  }catch(e){
-    //   console.log(e)
-    //  }
     try{
-      const result = await fetch('https://journeyjunction-eiw5ibe6u-gourab-das-projects.vercel.app/alltext')
-      // const result = await fetch('http://localhost:8000/alltext')
+      const result = await fetch(`${BASE_URL}alltext`)
       const res = await result.json()
       console.log(res)
     }catch(e){
