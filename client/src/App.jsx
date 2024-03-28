@@ -21,6 +21,7 @@ function App() {
     //  }
     try{
       const result = await fetch('https://journeyjunction-server.vercel.app/alltext')
+      // const result = await fetch('http://localhost:8000/alltext')
       const res = await result.json()
       console.log(res)
     }catch(e){
