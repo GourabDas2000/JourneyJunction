@@ -3,24 +3,32 @@ import mongoose from 'mongoose';
 import express from 'express';
 import cors from 'cors';
 import appget from './assets/routes/Trial.js';
+import TrialModal from './assets/modals/TrialModal.js';
 const app = express();
 app.use(express.json());
 dotenv.config();
+app.use(cors())
 const MAIN_URL = process.env.MAIN_URL;
 const PORT = process.env.PORT;
 
 
-app.use(cors({
-    origin: "http://localhost:5173/",
-    credentials: true
-}));
+// app.use(cors({
+//     origin: "http://localhost:5173/"
+// }));
 app.get('/', (req, res) => {
     res.send('This is it')
 });
 
 
 app.use('/auth', appget);
-
+app.get('/alltext', async(req, res) => {
+    try {
+        const result = await TrialModal.find()
+        res.send({ result: result })
+    } catch (e) {
+        res.send(e)
+    }
+})
 
 
 

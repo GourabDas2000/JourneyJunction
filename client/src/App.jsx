@@ -6,19 +6,26 @@ function App() {
   const [text , settext] = useState('')
   // console.log(process.env.REACT_BASE_URL)
   const handlesubmit = async() => {
-     try{
-       const result = await fetch('https://journeyjunction-server.vercel.app/auth/text', {
-         method: 'PUT',
-         body: JSON.stringify({ text }),
-         headers: {
-           'Content-Type': 'application/json'
-         }
-       })
-       const final = await result.json();
-       console.log(final);
-     }catch(e){
+    //  try{
+    //    const result = await fetch('https://journeyjunction-server.vercel.app/auth/text', {
+    //      method: 'PUT',
+    //      body: JSON.stringify({ text }),
+    //      headers: {
+    //        'Content-Type': 'application/json'
+    //      }
+    //    })
+    //    const final = await result.json();
+    //    console.log(final);
+    //  }catch(e){
+    //   console.log(e)
+    //  }
+    try{
+      const result = await fetch('http://localhost:8000/alltext')
+      const res = await result.json()
+      console.log(res)
+    }catch(e){
       console.log(e)
-     }
+    }
   }
   return (
     <>
