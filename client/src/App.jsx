@@ -8,7 +8,7 @@ function App() {
     try{
       const result = await fetch(`${BASE_URL}alltext`)
       const res = await result.json()
-      console.log(res)
+      console.log('res=',res)
     }catch(e){
       console.log(e)
     }
@@ -17,7 +17,6 @@ function App() {
     <>
      <input type='text' onChange={(e) => settext(e.target.value)}/>
      <button onClick={handlesubmit}>Click to store the text</button>
-     <h1>Ready to go</h1>
     </>
   )
 }
