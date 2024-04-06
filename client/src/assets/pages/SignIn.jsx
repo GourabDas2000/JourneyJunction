@@ -6,8 +6,8 @@ function SignIn() {
     <div class="h-lvh w-full flex justify-center items-center">
           <div class="h-lvh w-full flex flex-col tab:w-3/5   lap:w-[30%]" >
             <div class="flex justify-around items-center border-custom">
-              <h1 class="py-4 cursor-pointer">SignIn</h1>
-              <h2 class="py-4 cursor-pointer">SignUp</h2>
+              <h1 class="py-4 cursor-pointer text-nowrap">SignIn</h1>
+              <h2 class="py-4 cursor-pointer text-nowrap">SignUp</h2>
             </div>
             {
                 (signup)?(
